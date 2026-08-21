@@ -4,57 +4,1104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Nodo Ético - Desarrollamos soluciones de software, sistemas inteligentes y automatización para empresas que buscan innovar con calidad y confiabilidad.">
-  <meta name="keywords" content="desarrollo de software, aplicaciones móviles, sistemas web, automatización, inteligencia artificial, Node.js, React, Argentina">
-  <meta name="author" content="Nodo Ético">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nodo Ético - Tecnología inteligente para transformar ideas en soluciones reales">
-  <meta property="og:description" content="Desarrollamos soluciones de software, sistemas inteligentes y automatización para empresas que buscan innovar con calidad y confiabilidad.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_AR">
-  <meta property="og:site_name" content="Nodo Ético">
-  
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nodo Ético - Tecnología inteligente para transformar ideas en soluciones reales">
-  <meta name="twitter:description" content="Desarrollamos soluciones de software, sistemas inteligentes y automatización para empresas que buscan innovar con calidad y confiabilidad.">
-  
-  <!-- Theme Color -->
   <meta name="theme-color" content="#0f172a">
+  <title>Nodo Ético - Tecnología inteligente para transformar ideas en soluciones reales</title>
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-  
-  <!-- Preconnect a fuentes -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Fuente Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Estilos -->
-  <link rel="stylesheet" href="css/estilos-base.css">
-  <link rel="stylesheet" href="css/estilos-componentes.css">
-  <link rel="stylesheet" href="css/estilos-secciones.css">
-  <link rel="stylesheet" href="css/estilos-animaciones.css">
-  <link rel="stylesheet" href="css/estilos-responsive.css">
-  <link rel="stylesheet" href="css/estilos-utilidades.css">
-  
-  <!-- Robots -->
-  <meta name="robots" content="index, follow">
-  
-  <!-- Canonical -->
-  <link rel="canonical" href="https://nodoetico.com">
-  
-  <title>Nodo Ético - Tecnología inteligente para transformar ideas en soluciones reales</title>
+  <style>
+    /* VARIABLES CSS */
+    :root {
+      --color-primario: #0f172a;
+      --color-secundario: #3b82f6;
+      --color-acento: #06b6d4;
+      --color-fondo: #ffffff;
+      --color-fondo-oscuro: #0f172a;
+      --color-fondo-gris: #f8fafc;
+      --color-texto: #1e293b;
+      --color-texto-claro: #64748b;
+      --color-texto-blanco: #ffffff;
+      --color-borde: #e2e8f0;
+      --color-error: #ef4444;
+      --color-exito: #22c55e;
+      --fuente-principal: 'Inter', system-ui, sans-serif;
+      --altura-header: 70px;
+      --espaciado-sm: 0.5rem;
+      --espaciado-md: 1rem;
+      --espaciado-lg: 1.5rem;
+      --espaciado-xl: 2rem;
+      --espaciado-2xl: 3rem;
+      --espaciado-3xl: 4rem;
+      --espaciado-4xl: 6rem;
+      --radio-borde-md: 0.5rem;
+      --radio-borde-lg: 0.75rem;
+      --radio-borde-xl: 1rem;
+      --sombra-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --sombra-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --transicion-normal: 250ms ease;
+    }
+
+    /* RESET */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--fuente-principal); color: var(--color-texto); background: var(--color-fondo); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+    /* CONTENEDOR */
+    .contenedor { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--espaciado-lg); }
+
+    /* HEADER */
+    .encabezado { position: fixed; top: 0; left: 0; width: 100%; height: var(--altura-header); background: rgba(255,255,255,0.98); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-borde); z-index: 1000; }
+    .encabezado__contenedor { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .encabezado__logo { font-size: 1.5rem; font-weight: 800; color: var(--color-primario); }
+    .encabezado__logo-acento { color: var(--color-secundario); }
+    .encabezado__nav { display: none; }
+    .encabezado__lista { display: flex; gap: var(--espaciado-xl); }
+    .encabezado__enlace { font-size: 0.9rem; font-weight: 500; color: var(--color-texto); transition: color 0.2s; }
+    .encabezado__enlace:hover { color: var(--color-secundario); }
+    .encabezado__acciones { display: none; }
+    .encabezado__btn-menu { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: var(--color-texto); }
+    .encabezado__btn-menu svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    @media (min-width: 1024px) {
+      .encabezado__nav { display: flex; }
+      .encabezado__acciones { display: flex; }
+      .encabezado__btn-menu { display: none; }
+    }
+
+    /* BOTONES */
+    .boton { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.875rem 1.75rem; font-size: 1rem; font-weight: 600; border-radius: var(--radio-borde-md); transition: all 0.3s; }
+    .boton--primario { background: var(--color-secundario); color: white; box-shadow: 0 4px 14px rgba(59,130,246,0.4); }
+    .boton--primario:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.5); }
+    .boton--secundario { background: transparent; color: white; border: 2px solid white; }
+    .boton--secundario:hover { background: white; color: var(--color-primario); }
+    .boton--grande { padding: 1rem 2rem; font-size: 1.1rem; }
+
+    /* HERO */
+    .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f172a, #1e293b); overflow: hidden; padding-top: var(--altura-header); }
+    .hero__canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .hero__contenido { position: relative; z-index: 1; text-align: center; max-width: 800px; padding: var(--espaciado-xl); }
+    .hero__etiqueta { display: inline-block; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600; color: var(--color-acento); background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.2); border-radius: 50px; margin-bottom: var(--espaciado-xl); }
+    .hero__titulo { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; color: white; line-height: 1.1; margin-bottom: var(--espaciado-lg); }
+    .hero__titulo-acento { background: linear-gradient(135deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero__subtitulo { font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.8); margin-bottom: var(--espaciado-2xl); max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero__acciones { display: flex; flex-direction: column; gap: var(--espaciado-md); align-items: center; }
+
+    @media (min-width: 640px) {
+      .hero__acciones { flex-direction: row; justify-content: center; }
+    }
+
+    /* SECCIONES */
+    .seccion { padding: clamp(3rem, 8vw, 5rem) 0; }
+    .seccion--gris { background: var(--color-fondo-gris); }
+    .seccion__encabezado { text-align: center; margin-bottom: var(--espaciado-3xl); max-width: 700px; margin-left: auto; margin-right: auto; }
+    .seccion__etiqueta { display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--color-secundario); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--espaciado-sm); }
+    .seccion__titulo { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; color: var(--color-primario); margin-bottom: var(--espaciado-md); }
+    .seccion__subtitulo { font-size: 1.1rem; color: var(--color-texto-claro); }
+
+    /* QUIÉNES SOMOS */
+    .quienes-somos__contenido { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-2xl); align-items: center; }
+    .quienes-somos__parrafo { font-size: 1.1rem; color: var(--color-texto-claro); line-height: 1.8; margin-bottom: var(--espaciado-lg); }
+    .quienes-somos__destacado { font-size: 1.25rem; font-weight: 600; color: var(--color-primario); padding-left: var(--espaciado-lg); border-left: 3px solid var(--color-secundario); }
+    .quienes-somos__valores { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-lg); }
+    .quienes-somos__valor { display: flex; gap: var(--espaciado-md); padding: var(--espaciado-lg); background: var(--color-fondo-gris); border-radius: var(--radio-borde-lg); transition: all 0.3s; }
+    .quienes-somos__valor:hover { background: white; box-shadow: var(--sombra-md); }
+    .quienes-somos__valor-icono { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #06b6d4); border-radius: var(--radio-borde-md); color: white; }
+    .quienes-somos__valor-titulo { font-size: 1rem; font-weight: 700; color: var(--color-primario); margin-bottom: 0.25rem; }
+    .quienes-somos__valor-desc { font-size: 0.9rem; color: var(--color-texto-claro); }
+
+    @media (min-width: 640px) {
+      .quienes-somos__valores { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .quienes-somos__contenido { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* SERVICIOS */
+    .grid-servicios { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-xl); }
+    .tarjeta-servicio { padding: var(--espaciado-xl); background: white; border: 1px solid var(--color-borde); border-radius: var(--radio-borde-lg); transition: all 0.3s; position: relative; overflow: hidden; }
+    .tarjeta-servicio:hover { border-color: var(--color-secundario); box-shadow: var(--sombra-lg); transform: translateY(-4px); }
+    .tarjeta-servicio__icono { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; margin-bottom: var(--espaciado-lg); background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,182,212,0.1)); border-radius: var(--radio-borde-md); color: var(--color-secundario); }
+    .tarjeta-servicio__titulo { font-size: 1.25rem; font-weight: 700; color: var(--color-primario); margin-bottom: var(--espaciado-sm); }
+    .tarjeta-servicio__desc { font-size: 1rem; color: var(--color-texto-claro); margin-bottom: var(--espaciado-lg); line-height: 1.7; }
+    .tarjeta-servicio__lista { display: flex; flex-direction: column; gap: 0.5rem; }
+    .tarjeta-servicio__item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--color-texto); }
+    .tarjeta-servicio__check { color: var(--color-exito); }
+
+    @media (min-width: 640px) {
+      .grid-servicios { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-servicios { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* PROYECTOS */
+    .grid-proyectos { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-xl); }
+    .tarjeta-proyecto { background: white; border: 1px solid var(--color-borde); border-radius: var(--radio-borde-lg); overflow: hidden; transition: all 0.3s; }
+    .tarjeta-proyecto:hover { border-color: var(--color-secundario); box-shadow: var(--sombra-lg); }
+    .tarjeta-proyecto__imagen { width: 100%; height: 200px; object-fit: cover; background: linear-gradient(135deg, #1e293b, #334155); }
+    .tarjeta-proyecto__info { padding: var(--espaciado-xl); }
+    .tarjeta-proyecto__categoria { display: inline-block; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 600; color: var(--color-secundario); background: rgba(59,130,246,0.1); border-radius: 50px; text-transform: uppercase; margin-bottom: var(--espaciado-sm); }
+    .tarjeta-proyecto__titulo { font-size: 1.25rem; font-weight: 700; color: var(--color-primario); margin-bottom: var(--espaciado-sm); }
+    .tarjeta-proyecto__desc { font-size: 1rem; color: var(--color-texto-claro); margin-bottom: var(--espaciado-md); }
+    .tarjeta-proyecto__tech { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: var(--espaciado-md); }
+    .tarjeta-proyecto__tech-item { padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 500; color: var(--color-texto); background: var(--color-fondo-gris); border-radius: 4px; }
+
+    @media (min-width: 640px) {
+      .grid-proyectos { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* PROCESO */
+    .seccion--oscura { background: var(--color-fondo-oscuro); color: white; }
+    .seccion--oscura .seccion__titulo { color: white; }
+    .seccion--oscura .seccion__subtitulo { color: rgba(255,255,255,0.7); }
+    .grid-proceso { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-xl); }
+    .paso { padding: var(--espaciado-xl); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radio-borde-lg); transition: all 0.3s; }
+    .paso:hover { background: rgba(255,255,255,0.08); border-color: var(--color-secundario); transform: translateY(-4px); }
+    .paso__numero { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: var(--espaciado-md); }
+    .paso__icono { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #06b6d4); border-radius: var(--radio-borde-md); color: white; margin-bottom: var(--espaciado-md); }
+    .paso__titulo { font-size: 1.25rem; font-weight: 700; margin-bottom: var(--espaciado-sm); }
+    .paso__desc { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.7; }
+
+    @media (min-width: 768px) {
+      .grid-proceso { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-proceso { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* PROPUESTA VALOR */
+    .grid-valor { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-xl); }
+    .item-valor { display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--espaciado-xl); background: var(--color-fondo-gris); border-radius: var(--radio-borde-lg); transition: all 0.3s; }
+    .item-valor:hover { background: white; box-shadow: var(--sombra-md); transform: translateY(-4px); }
+    .item-valor__icono { display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; margin-bottom: var(--espaciado-lg); background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,182,212,0.1)); border-radius: 50%; color: var(--color-secundario); }
+    .item-valor__titulo { font-size: 1.1rem; font-weight: 700; color: var(--color-primario); margin-bottom: var(--espaciado-sm); }
+    .item-valor__desc { font-size: 0.9rem; color: var(--color-texto-claro); line-height: 1.7; }
+
+    @media (min-width: 640px) {
+      .grid-valor { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-valor { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* FORMULARIO */
+    .formulario { background: white; border: 1px solid var(--color-borde); border-radius: var(--radio-borde-xl); padding: var(--espaciado-xl); max-width: 800px; margin: 0 auto; }
+    .formulario__titulo { font-size: 1.5rem; font-weight: 700; color: var(--color-primario); margin-bottom: var(--espaciado-sm); text-align: center; }
+    .formulario__subtitulo { font-size: 1rem; color: var(--color-texto-claro); text-align: center; margin-bottom: var(--espaciado-xl); }
+    .formulario__grid { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-md); }
+    .campo { margin-bottom: var(--espaciado-md); }
+    .campo__etiqueta { display: block; font-size: 0.875rem; font-weight: 600; color: var(--color-texto); margin-bottom: 0.5rem; }
+    .campo__obligatorio { color: var(--color-error); }
+    .campo__input { width: 100%; padding: 0.875rem 1rem; font-size: 1rem; color: var(--color-texto); background: white; border: 1px solid var(--color-borde); border-radius: var(--radio-borde-md); transition: border-color 0.2s, box-shadow 0.2s; font-family: inherit; }
+    .campo__input:focus { outline: none; border-color: var(--color-secundario); box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+    .campo__input--textarea { resize: vertical; min-height: 120px; }
+    .campo__input--select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1rem; padding-right: 2.5rem; }
+    .campo__error { display: none; font-size: 0.875rem; color: var(--color-error); margin-top: 0.25rem; }
+    .campo__error--visible { display: block; }
+
+    @media (min-width: 640px) {
+      .formulario__grid { grid-template-columns: repeat(2, 1fr); }
+      .formulario__grid .campo--completo { grid-column: span 2; }
+    }
+
+    /* CONTACTO */
+    .contacto__contenido { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-2xl); }
+    .contacto__titulo { font-size: clamp(1.5rem, 4vw, 2.25rem); font-weight: 800; color: var(--color-primario); margin-bottom: var(--espaciado-md); }
+    .contacto__texto { font-size: 1.1rem; color: var(--color-texto-claro); margin-bottom: var(--espaciado-xl); }
+    .contacto__canales { display: flex; flex-direction: column; gap: var(--espaciado-md); }
+    .contacto__canal { display: flex; align-items: center; gap: var(--espaciado-md); padding: var(--espaciado-lg); background: var(--color-fondo-gris); border-radius: var(--radio-borde-lg); transition: all 0.3s; }
+    .contacto__canal:hover { background: white; box-shadow: var(--sombra-md); }
+    .contacto__canal-icono { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6, #06b6d4); border-radius: var(--radio-borde-md); color: white; flex-shrink: 0; }
+    .contacto__canal-titulo { font-size: 1rem; font-weight: 600; color: var(--color-primario); }
+    .contacto__canal-valor { font-size: 0.9rem; color: var(--color-texto-claro); }
+
+    @media (min-width: 1024px) {
+      .contacto__contenido { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* FOOTER */
+    .footer { background: var(--color-fondo-oscuro); color: white; padding: var(--espaciado-3xl) 0 var(--espaciado-xl); }
+    .footer__grid { display: grid; grid-template-columns: 1fr; gap: var(--espaciado-2xl); padding-bottom: var(--espaciado-2xl); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer__logo { font-size: 1.5rem; font-weight: 800; margin-bottom: var(--espaciado-md); }
+    .footer__desc { font-size: 0.9rem; color: rgba(255,255,255,0.7); margin-bottom: var(--espaciado-lg); }
+    .footer__titulo { font-size: 1rem; font-weight: 600; margin-bottom: var(--espaciado-md); }
+    .footer__lista { display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer__enlace { font-size: 0.9rem; color: rgba(255,255,255,0.7); transition: color 0.2s; }
+    .footer__enlace:hover { color: white; }
+    .footer__abajo { display: flex; flex-direction: column; align-items: center; gap: var(--espaciado-md); padding-top: var(--espaciado-xl); text-align: center; }
+    .footer__copyright { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+    .footer__legales { display: flex; gap: var(--espaciado-lg); }
+    .footer__legal { font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+
+    @media (min-width: 640px) {
+      .footer__grid { grid-template-columns: repeat(2, 1fr); }
+      .footer__abajo { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: 2fr 1fr 1fr 1fr; }
+    }
+
+    /* BOTÓN WHATSAPP */
+    .btn-whatsapp { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37,211,102,0.4); z-index: 999; transition: all 0.3s; }
+    .btn-whatsapp:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+    .btn-whatsapp svg { width: 28px; height: 28px; }
+    .btn-whatsapp__pulso { position: absolute; width: 100%; height: 100%; background: #25d366; border-radius: 50%; animation: pulso 2s infinite; opacity: 0; }
+
+    @keyframes pulso {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ICONOS */
+    .icono { display: inline-block; vertical-align: middle; }
+
+    /* ANIMACIONES */
+    .animacion { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .animacion--visible { opacity: 1; transform: translateY(0); }
+    .retraso-1 { transition-delay: 0.1s; }
+    .retraso-2 { transition-delay: 0.2s; }
+    .retraso-3 { transition-delay: 0.3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animacion { opacity: 1; transform: none; transition: none; }
+      .btn-whatsapp__pulso { animation: none; }
+    }
+  </style>
 </head>
 <body>
-  <!-- El contenido será renderizado por JavaScript -->
-  <main id="contenido-principal" role="main">
-    <!-- Secciones renderizadas dinámicamente -->
+  <!-- HEADER -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__contenedor">
+      <a href="#inicio" class="encabezado__logo">Nodo<span class="encabezado__logo-acento">Ético</span></a>
+      
+      <nav class="encabezado__nav">
+        <ul class="encabezado__lista">
+          <li><a href="#inicio" class="encabezado__enlace">Inicio</a></li>
+          <li><a href="#quienes-somos" class="encabezado__enlace">Quiénes somos</a></li>
+          <li><a href="#servicios" class="encabezado__enlace">Servicios</a></li>
+          <li><a href="#proyectos" class="encabezado__enlace">Proyectos</a></li>
+          <li><a href="#proceso" class="encabezado__enlace">Cómo trabajamos</a></li>
+          <li><a href="#contacto" class="encabezado__enlace">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <div class="encabezado__acciones">
+        <a href="#presupuesto" class="boton boton--primario" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Solicitar presupuesto</a>
+      </div>
+      
+      <button class="encabezado__btn-menu" aria-label="Menú">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <canvas id="hero-canvas" class="hero__canvas"></canvas>
+      <div class="hero__contenido">
+        <span class="hero__etiqueta animacion">Soluciones de Software</span>
+        <h1 class="hero__titulo animacion retraso-1">
+          Tecnología inteligente para transformar 
+          <span class="hero__titulo-acento">ideas en soluciones reales</span>
+        </h1>
+        <p class="hero__subtitulo animacion retraso-2">
+          Desarrollamos software, sistemas inteligentes y automatización para empresas que buscan innovar con calidad y confiabilidad.
+        </p>
+        <div class="hero__acciones animacion retraso-3">
+          <a href="#presupuesto" class="boton boton--primario boton--grande">Solicitar presupuesto</a>
+          <a href="#servicios" class="boton boton--secundario boton--grande">Conocer servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta">Quiénes somos</span>
+          <h2 class="seccion__titulo">Nodo Ético</h2>
+          <p class="seccion__subtitulo">Desarrollamos tecnología seria, moderna y pensada para resolver problemas reales.</p>
+        </div>
+        
+        <div class="quienes-somos__contenido">
+          <div class="animacion">
+            <p class="quienes-somos__parrafo">
+              Nodo Ético es una empresa de tecnología dedicada a desarrollar soluciones de software a medida, sistemas inteligentes, automatización y tecnología aplicada. Trabajamos de la mano con nuestros clientes para transformar sus ideas en productos digitales escalables, modernos y confiables.
+            </p>
+            <p class="quienes-somos__destacado">
+              Creemos que la tecnología debe resolver problemas reales. Por eso, cada proyecto que desarrollamos está diseñado para generar un impacto positivo y medible en los negocios de nuestros clientes.
+            </p>
+          </div>
+          
+          <div class="quienes-somos__valores animacion">
+            <div class="quienes-somos__valor">
+              <div class="quienes-somos__valor-icono">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <div>
+                <h3 class="quienes-somos__valor-titulo">Enfoque Tecnológico</h3>
+                <p class="quienes-somos__valor-desc">Nuestro enfoque combina ingeniería de software de alto nivel con diseño centrado en el usuario.</p>
+              </div>
+            </div>
+            
+            <div class="quienes-somos__valor">
+              <div class="quienes-somos__valor-icono">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+              </div>
+              <div>
+                <h3 class="quienes-somos__valor-titulo">Compromiso</h3>
+                <p class="quienes-somos__valor-desc">Cada proyecto es único. Trabajamos de la mano con nuestros clientes para garantizar resultados.</p>
+              </div>
+            </div>
+            
+            <div class="quienes-somos__valor">
+              <div class="quienes-somos__valor-icono">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <h3 class="quienes-somos__valor-titulo">Calidad</h3>
+                <p class="quienes-somos__valor-desc">Código limpio, arquitectura escalable y buenas prácticas. No hacemos atajos.</p>
+              </div>
+            </div>
+            
+            <div class="quienes-somos__valor">
+              <div class="quienes-somos__valor-icono">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h3 class="quienes-somos__valor-titulo">Cercanía</h3>
+                <p class="quienes-somos__valor-desc">Comunicación clara, transparencia total y acompañamiento continuo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta">Servicios</span>
+          <h2 class="seccion__titulo">Soluciones que impulsan tu negocio</h2>
+          <p class="seccion__subtitulo">Ofrecemos un ecosistema completo de servicios tecnológicos.</p>
+        </div>
+        
+        <div class="grid-servicios">
+          <article class="tarjeta-servicio animacion">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Desarrollo de Software</h3>
+            <p class="tarjeta-servicio__desc">Sistemas personalizados diseñados para resolver necesidades específicas de tu negocio.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Arquitectura modular</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Código limpio y documentado</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Escalabilidad</li>
+            </ul>
+          </article>
+          
+          <article class="tarjeta-servicio animacion retraso-1">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Aplicaciones Móviles</h3>
+            <p class="tarjeta-servicio__desc">Aplicaciones modernas, rápidas y adaptables que ofrecen la mejor experiencia.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Multiplataforma</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Alto rendimiento</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Experiencia nativa</li>
+            </ul>
+          </article>
+          
+          <article class="tarjeta-servicio animacion retraso-2">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Sistemas Web</h3>
+            <p class="tarjeta-servicio__desc">Plataformas web escalables, seguras y responsive para cualquier necesidad.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Responsive design</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Seguridad integrada</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> APIs robustas</li>
+            </ul>
+          </article>
+          
+          <article class="tarjeta-servicio animacion">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Automatización</h3>
+            <p class="tarjeta-servicio__desc">Automatización de procesos y tareas repetitivas para liberar tiempo y reducir errores.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Reducción de errores</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Ahorro de tiempo</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Procesos optimizados</li>
+            </ul>
+          </article>
+          
+          <article class="tarjeta-servicio animacion retraso-1">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"></path></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Inteligencia Artificial</h3>
+            <p class="tarjeta-servicio__desc">Integración de IA en productos y procesos para potenciar la toma de decisiones.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Machine Learning</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Procesamiento de datos</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Predicciones</li>
+            </ul>
+          </article>
+          
+          <article class="tarjeta-servicio animacion retraso-2">
+            <div class="tarjeta-servicio__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"></path></svg>
+            </div>
+            <h3 class="tarjeta-servicio__titulo">Soluciones Empresariales</h3>
+            <p class="tarjeta-servicio__desc">Sistemas diseñados para mejorar procesos internos y aumentar productividad.</p>
+            <ul class="tarjeta-servicio__lista">
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Optimización de procesos</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Reducción de costos</li>
+              <li class="tarjeta-servicio__item"><span class="tarjeta-servicio__check">✓</span> Escalabilidad</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta">Proyectos</span>
+          <h2 class="seccion__titulo">Soluciones que generan resultados</h2>
+          <p class="seccion__subtitulo">Cada proyecto es una historia de éxito.</p>
+        </div>
+        
+        <div class="grid-proyectos">
+          <article class="tarjeta-proyecto animacion">
+            <div class="tarjeta-proyecto__imagen" style="background: linear-gradient(135deg, #1e293b, #334155); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">📊</div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Sistema Web</span>
+              <h3 class="tarjeta-proyecto__titulo">Sistema de Gestión de Inventario</h3>
+              <p class="tarjeta-proyecto__desc">Plataforma web completa para control de stock y reportes en tiempo real.</p>
+              <div class="tarjeta-proyecto__tech">
+                <span class="tarjeta-proyecto__tech-item">React</span>
+                <span class="tarjeta-proyecto__tech-item">Node.js</span>
+                <span class="tarjeta-proyecto__tech-item">PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="tarjeta-proyecto animacion retraso-1">
+            <div class="tarjeta-proyecto__imagen" style="background: linear-gradient(135deg, #0f766e, #06b6d4); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">📱</div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Aplicación Móvil</span>
+              <h3 class="tarjeta-proyecto__titulo">App Delivery Sustentable</h3>
+              <p class="tarjeta-proyecto__desc">Aplicación móvil para delivery con enfoque en sostenibilidad.</p>
+              <div class="tarjeta-proyecto__tech">
+                <span class="tarjeta-proyecto__tech-item">React Native</span>
+                <span class="tarjeta-proyecto__tech-item">Firebase</span>
+                <span class="tarjeta-proyecto__tech-item">Google Maps</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="tarjeta-proyecto animacion">
+            <div class="tarjeta-proyecto__imagen" style="background: linear-gradient(135deg, #4338ca, #7c3aed); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">🧠</div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Inteligencia Artificial</span>
+              <h3 class="tarjeta-proyecto__titulo">Dashboard de Analítica con IA</h3>
+              <p class="tarjeta-proyecto__desc">Panel inteligente que procesa datos y genera predicciones automáticas.</p>
+              <div class="tarjeta-proyecto__tech">
+                <span class="tarjeta-proyecto__tech-item">Python</span>
+                <span class="tarjeta-proyecto__tech-item">TensorFlow</span>
+                <span class="tarjeta-proyecto__tech-item">React</span>
+              </div>
+            </div>
+          </article>
+          
+          <article class="tarjeta-proyecto animacion retraso-1">
+            <div class="tarjeta-proyecto__imagen" style="background: linear-gradient(135deg, #b45309, #f59e0b); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.3); font-size: 3rem;">⚙️</div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Automatización</span>
+              <h3 class="tarjeta-proyecto__titulo">Automatización de RRHH</h3>
+              <p class="tarjeta-proyecto__desc">Sistema que automatiza evaluaciones, reportes y seguimiento de empleados.</p>
+              <div class="tarjeta-proyecto__tech">
+                <span class="tarjeta-proyecto__tech-item">Vue.js</span>
+                <span class="tarjeta-proyecto__tech-item">Express</span>
+                <span class="tarjeta-proyecto__tech-item">MongoDB</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section id="proceso" class="seccion seccion--oscura">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta" style="color: var(--color-acento);">Proceso</span>
+          <h2 class="seccion__titulo">Cómo trabajamos</h2>
+          <p class="seccion__subtitulo">Un proceso claro, transparente y enfocado en resultados.</p>
+        </div>
+        
+        <div class="grid-proceso">
+          <div class="paso animacion">
+            <span class="paso__numero">01</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            </div>
+            <h3 class="paso__titulo">Analizamos</h3>
+            <p class="paso__desc">Entendemos el problema, los objetivos y las necesidades del cliente.</p>
+          </div>
+          
+          <div class="paso animacion retraso-1">
+            <span class="paso__numero">02</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg>
+            </div>
+            <h3 class="paso__titulo">Diseñamos</h3>
+            <p class="paso__desc">Definimos la solución, la arquitectura y la experiencia de usuario.</p>
+          </div>
+          
+          <div class="paso animacion retraso-2">
+            <span class="paso__numero">03</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="paso__titulo">Desarrollamos</h3>
+            <p class="paso__desc">Construimos el sistema de manera modular y escalable.</p>
+          </div>
+          
+          <div class="paso animacion">
+            <span class="paso__numero">04</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 class="paso__titulo">Probamos</h3>
+            <p class="paso__desc">Validamos funcionamiento, rendimiento y experiencia de usuario.</p>
+          </div>
+          
+          <div class="paso animacion retraso-1">
+            <span class="paso__numero">05</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+            </div>
+            <h3 class="paso__titulo">Implementamos</h3>
+            <p class="paso__desc">Ponemos la solución en funcionamiento con acompañamiento.</p>
+          </div>
+          
+          <div class="paso animacion retraso-2">
+            <span class="paso__numero">06</span>
+            <div class="paso__icono">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <h3 class="paso__titulo">Evolucionamos</h3>
+            <p class="paso__desc">Mantenemos, mejoramos y evolucionamos el producto constantemente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPUESTA VALOR -->
+    <section id="propuesta-valor" class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta">Propuesta de valor</span>
+          <h2 class="seccion__titulo">¿Por qué Nodo Ético?</h2>
+          <p class="seccion__subtitulo">No solo desarrollamos software. Creamos soluciones que generan valor real.</p>
+        </div>
+        
+        <div class="grid-valor">
+          <div class="item-valor animacion">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3 class="item-valor__titulo">Desarrollo personalizado</h3>
+            <p class="item-valor__desc">Software a medida, sin plantillas genéricas.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-1">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="item-valor__titulo">Arquitectura escalable</h3>
+            <p class="item-valor__desc">Sistemas diseñados para crecer con tu empresa.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-2">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+            </div>
+            <h3 class="item-valor__titulo">Diseño responsive</h3>
+            <p class="item-valor__desc">Experiencias perfectas en cualquier dispositivo.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-3">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="item-valor__titulo">Tecnología moderna</h3>
+            <p class="item-valor__desc">Últimas tecnologías para garantizar rendimiento.</p>
+          </div>
+          
+          <div class="item-valor animacion">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h3 class="item-valor__titulo">Automatización</h3>
+            <p class="item-valor__desc">Procesos automatizados que liberan tiempo.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-1">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2z"></path></svg>
+            </div>
+            <h3 class="item-valor__titulo">Inteligencia artificial</h3>
+            <p class="item-valor__desc">IA integrada para potenciar decisiones.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-2">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="item-valor__titulo">Acompañamiento</h3>
+            <p class="item-valor__desc">Estamos presentes en cada etapa del proyecto.</p>
+          </div>
+          
+          <div class="item-valor animacion retraso-3">
+            <div class="item-valor__icono">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <h3 class="item-valor__titulo">Mantenimiento</h3>
+            <p class="item-valor__desc">Tu producto evoluciona constantemente.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESUPUESTO -->
+    <section id="presupuesto" class="seccion">
+      <div class="contenedor">
+        <div class="seccion__encabezado animacion">
+          <span class="seccion__etiqueta">Presupuesto</span>
+          <h2 class="seccion__titulo">Solicitar presupuesto</h2>
+          <p class="seccion__subtitulo">Contanos sobre tu proyecto. Nosotros nos encargamos del resto.</p>
+        </div>
+        
+        <form id="formulario-presupuesto" class="formulario animacion" novalidate>
+          <h3 class="formulario__titulo">Contanos sobre tu proyecto</h3>
+          <p class="formulario__subtitulo">Completá el formulario y te contactaremos pronto.</p>
+          
+          <div class="formulario__grid">
+            <div class="campo">
+              <label for="nombre" class="campo__etiqueta">Nombre completo <span class="campo__obligatorio">*</span></label>
+              <input type="text" id="nombre" name="nombre" class="campo__input" placeholder="Tu nombre" required>
+              <span class="campo__error" id="error-nombre">Por favor, ingresá tu nombre.</span>
+            </div>
+            
+            <div class="campo">
+              <label for="empresa" class="campo__etiqueta">Empresa / Organización</label>
+              <input type="text" id="empresa" name="empresa" class="campo__input" placeholder="Nombre de tu empresa">
+            </div>
+            
+            <div class="campo">
+              <label for="email" class="campo__etiqueta">Email <span class="campo__obligatorio">*</span></label>
+              <input type="email" id="email" name="email" class="campo__input" placeholder="tu@email.com" required>
+              <span class="campo__error" id="error-email">Por favor, ingresá un email válido.</span>
+            </div>
+            
+            <div class="campo">
+              <label for="telefono" class="campo__etiqueta">Teléfono / WhatsApp <span class="campo__obligatorio">*</span></label>
+              <input type="tel" id="telefono" name="telefono" class="campo__input" placeholder="+54 9 11 1234-5678" required>
+              <span class="campo__error" id="error-telefono">Por favor, ingresá un teléfono válido.</span>
+            </div>
+            
+            <div class="campo">
+              <label for="tipo-proyecto" class="campo__etiqueta">Tipo de proyecto <span class="campo__obligatorio">*</span></label>
+              <select id="tipo-proyecto" name="tipo-proyecto" class="campo__input campo__input--select" required>
+                <option value="" disabled selected>Seleccionar...</option>
+                <option value="sistema-web">Sistema web</option>
+                <option value="aplicacion-movil">Aplicación móvil</option>
+                <option value="software-empresarial">Software empresarial</option>
+                <option value="automatizacion">Automatización</option>
+                <option value="inteligencia-artificial">Inteligencia artificial</option>
+                <option value="landing-page">Landing page</option>
+                <option value="tienda-online">Tienda online</option>
+                <option value="otro">Otro</option>
+              </select>
+              <span class="campo__error" id="error-tipo-proyecto">Por favor, seleccioná el tipo de proyecto.</span>
+            </div>
+            
+            <div class="campo">
+              <label for="presupuesto" class="campo__etiqueta">Presupuesto estimado</label>
+              <input type="text" id="presupuesto" name="presupuesto" class="campo__input" placeholder="Ej: $500.000 - $1.000.000">
+            </div>
+            
+            <div class="campo campo--completo">
+              <label for="descripcion" class="campo__etiqueta">Descripción del proyecto <span class="campo__obligatorio">*</span></label>
+              <textarea id="descripcion" name="descripcion" class="campo__input campo__input--textarea" placeholder="Contanos sobre tu proyecto..." required></textarea>
+              <span class="campo__error" id="error-descripcion">Por favor, describí tu proyecto.</span>
+            </div>
+            
+            <div class="campo">
+              <label for="plazo" class="campo__etiqueta">Plazo estimado</label>
+              <input type="text" id="plazo" name="plazo" class="campo__input" placeholder="Ej: 3 meses">
+            </div>
+          </div>
+          
+          <div id="mensaje-exito" style="display: none; padding: 1rem; background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.2); border-radius: 0.5rem; margin-bottom: 1rem; text-align: center; color: #16a34a;">
+            ¡Formulario enviado! Se abrirá WhatsApp para continuar.
+          </div>
+          
+          <button type="submit" class="boton boton--primario boton--grande" style="width: 100%; margin-top: 1.5rem;">
+            Solicitar presupuesto
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="seccion seccion--gris">
+      <div class="contenedor">
+        <div class="contacto__contenido">
+          <div class="animacion">
+            <h2 class="contacto__titulo">¿Tenés una idea? Hagámosla realidad.</h2>
+            <p class="contacto__texto">Estamos listos para escuchar tu proyecto y convertirlo en una solución tecnológica de alto nivel.</p>
+            
+            <div class="contacto__canales">
+              <a href="https://wa.me/5491112345678" class="contacto__canal" target="_blank" rel="noopener noreferrer">
+                <div class="contacto__canal-icono">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"></path></svg>
+                </div>
+                <div>
+                  <div class="contacto__canal-titulo">WhatsApp</div>
+                  <div class="contacto__canal-valor">Contactanos por WhatsApp</div>
+                </div>
+              </a>
+              
+              <a href="mailto:info@nodoetico.com" class="contacto__canal">
+                <div class="contacto__canal-icono">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <div>
+                  <div class="contacto__canal-titulo">Email</div>
+                  <div class="contacto__canal-valor">info@nodoetico.com</div>
+                </div>
+              </a>
+              
+              <a href="tel:+5491112345678" class="contacto__canal">
+                <div class="contacto__canal-icono">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contacto__canal-titulo">Teléfono</div>
+                  <div class="contacto__canal-valor">+54 9 11 1234-5678</div>
+                </div>
+              </a>
+              
+              <div class="contacto__canal">
+                <div class="contacto__canal-icono">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <div>
+                  <div class="contacto__canal-titulo">Ubicación</div>
+                  <div class="contacto__canal-valor">Buenos Aires, Argentina</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="animacion retraso-1" style="background: var(--color-fondo-gris); border-radius: var(--radio-borde-lg); display: flex; align-items: center; justify-content: center; min-height: 300px; text-align: center; padding: 2rem;">
+            <div>
+              <div style="width: 64px; height: 64px; margin: 0 auto 1rem; background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(6,182,212,0.1)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--color-secundario);">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <p style="color: var(--color-texto-claro);">Trabajamos de manera remota con clientes de toda Latinoamérica y el mundo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  
-  <!-- Scripts -->
-  <script type="module" src="js/app.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Nodo<span style="color: var(--color-secundario);">Ético</span></div>
+          <p class="footer__desc">Tecnología inteligente para transformar ideas en soluciones reales.</p>
+        </div>
+        
+        <div>
+          <h4 class="footer__titulo">Navegación</h4>
+          <ul class="footer__lista">
+            <li><a href="#inicio" class="footer__enlace">Inicio</a></li>
+            <li><a href="#quienes-somos" class="footer__enlace">Quiénes somos</a></li>
+            <li><a href="#servicios" class="footer__enlace">Servicios</a></li>
+            <li><a href="#proyectos" class="footer__enlace">Proyectos</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer__titulo">Servicios</h4>
+          <ul class="footer__lista">
+            <li><span class="footer__enlace">Desarrollo de Software</span></li>
+            <li><span class="footer__enlace">Aplicaciones Móviles</span></li>
+            <li><span class="footer__enlace">Sistemas Web</span></li>
+            <li><span class="footer__enlace">Automatización</span></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer__titulo">Contacto</h4>
+          <ul class="footer__lista">
+            <li><a href="mailto:info@nodoetico.com" class="footer__enlace">info@nodoetico.com</a></li>
+            <li><a href="tel:+5491112345678" class="footer__enlace">+54 9 11 1234-5678</a></li>
+            <li><a href="https://wa.me/5491112345678" class="footer__enlace" target="_blank">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__abajo">
+        <p class="footer__copyright">© 2024 Nodo Ético. Todos los derechos reservados.</p>
+        <div class="footer__legales">
+          <a href="#" class="footer__legal">Política de privacidad</a>
+          <a href="#" class="footer__legal">Términos y condiciones</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/5491112345678?text=Hola%20Nodo%20%C3%89tico.%20Quisiera%20solicitar%20informaci%C3%B3n." class="btn-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <span class="btn-whatsapp__pulso"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // ============================================
+    // SISTEMA DE PARTÍCULAS
+    // ============================================
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let particulas = [];
+    let animationId;
+    let reduccionMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    function redimensionar() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = rect.width * dpr;
+      canvas.height = rect.height * dpr;
+      canvas.style.width = rect.width + 'px';
+      canvas.style.height = rect.height + 'px';
+      ctx.scale(dpr, dpr);
+    }
+    
+    function crearParticulas() {
+      const cantidad = window.innerWidth < 768 ? 30 : 60;
+      particulas = [];
+      for (let i = 0; i < cantidad; i++) {
+        particulas.push({
+          x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
+          y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
+          tamano: Math.random() * 2 + 1,
+          velocidadX: (Math.random() - 0.5) * 0.5,
+          velocidadY: (Math.random() - 0.5) * 0.5,
+          color: Math.random() > 0.5 ? 'rgba(59, 130, 246, 0.5)' : 'rgba(6, 182, 212, 0.5)',
+          opacidad: Math.random() * 0.5 + 0.3
+        });
+      }
+    }
+    
+    function animar() {
+      if (reduccionMovimiento) return;
+      
+      ctx.clearRect(0, 0, canvas.width / (window.devicePixelRatio || 1), canvas.height / (window.devicePixelRatio || 1));
+      
+      particulas.forEach((p, i) => {
+        p.x += p.velocidadX;
+        p.y += p.velocidadY;
+        
+        if (p.x < 0 || p.x > canvas.width / (window.devicePixelRatio || 1)) p.velocidadX *= -1;
+        if (p.y < 0 || p.y > canvas.height / (window.devicePixelRatio || 1)) p.velocidadY *= -1;
+        
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.tamano, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        
+        // Conexiones
+        for (let j = i + 1; j < particulas.length; j++) {
+          const dx = p.x - particulas[j].x;
+          const dy = p.y - particulas[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(particulas[j].x, particulas[j].y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.2 * (1 - dist / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      });
+      
+      animationId = requestAnimationFrame(animar);
+    }
+    
+    if (!reduccionMovimiento) {
+      redimensionar();
+      crearParticulas();
+      animar();
+      window.addEventListener('resize', () => { redimensionar(); crearParticulas(); });
+    }
+
+    // ============================================
+    // ANIMACIONES SCROLL
+    // ============================================
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animacion--visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.animacion').forEach(el => observer.observe(el));
+
+    // ============================================
+    // FORMULARIO
+    // ============================================
+    const formulario = document.getElementById('formulario-presupuesto');
+    formulario.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let valido = true;
+      
+      // Validar nombre
+      const nombre = document.getElementById('nombre');
+      const errorNombre = document.getElementById('error-nombre');
+      if (!nombre.value.trim()) {
+        errorNombre.classList.add('campo__error--visible');
+        valido = false;
+      } else {
+        errorNombre.classList.remove('campo__error--visible');
+      }
+      
+      // Validar email
+      const email = document.getElementById('email');
+      const errorEmail = document.getElementById('error-email');
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email.value)) {
+        errorEmail.classList.add('campo__error--visible');
+        valido = false;
+      } else {
+        errorEmail.classList.remove('campo__error--visible');
+      }
+      
+      // Validar teléfono
+      const telefono = document.getElementById('telefono');
+      const errorTelefono = document.getElementById('error-telefono');
+      if (!telefono.value.trim()) {
+        errorTelefono.classList.add('campo__error--visible');
+        valido = false;
+      } else {
+        errorTelefono.classList.remove('campo__error--visible');
+      }
+      
+      // Validar tipo de proyecto
+      const tipoProyecto = document.getElementById('tipo-proyecto');
+      const errorTipo = document.getElementById('error-tipo-proyecto');
+      if (!tipoProyecto.value) {
+        errorTipo.classList.add('campo__error--visible');
+        valido = false;
+      } else {
+        errorTipo.classList.remove('campo__error--visible');
+      }
+      
+      // Validar descripción
+      const descripcion = document.getElementById('descripcion');
+      const errorDescripcion = document.getElementById('error-descripcion');
+      if (!descripcion.value.trim()) {
+        errorDescripcion.classList.add('campo__error--visible');
+        valido = false;
+      } else {
+        errorDescripcion.classList.remove('campo__error--visible');
+      }
+      
+      if (!valido) return;
+      
+      // Construir mensaje
+      const tipoFormateado = tipoProyecto.value.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      let mensaje = `Hola Nodo Ético.\n\nQuisiera solicitar un presupuesto.\n\n`;
+      mensaje += `Nombre: ${nombre.value}\n`;
+      if (document.getElementById('empresa').value) mensaje += `Empresa: ${document.getElementById('empresa').value}\n`;
+      mensaje += `Email: ${email.value}\n`;
+      mensaje += `WhatsApp: ${telefono.value}\n`;
+      mensaje += `Tipo de proyecto: ${tipoFormateado}\n`;
+      if (document.getElementById('presupuesto').value) mensaje += `Presupuesto estimado: ${document.getElementById('presupuesto').value}\n`;
+      mensaje += `Descripción: ${descripcion.value}\n`;
+      if (document.getElementById('plazo').value) mensaje += `Plazo: ${document.getElementById('plazo').value}\n`;
+      mensaje += `\nQuedo atento/a.`;
+      
+      // Abrir WhatsApp
+      document.getElementById('mensaje-exito').style.display = 'block';
+      setTimeout(() => {
+        window.open(`https://wa.me/5491112345678?text=${encodeURIComponent(mensaje)}`, '_blank');
+      }, 500);
+      
+      // Limpiar
+      setTimeout(() => {
+        formulario.reset();
+        document.getElementById('mensaje-exito').style.display = 'none';
+      }, 2000);
+    });
+
+    // ============================================
+    // SMOOTH SCROLL
+    // ============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerHeight = 70;
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+          window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ============================================
+    // HEADER SCROLL
+    // ============================================
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.encabezado');
+      if (window.scrollY > 100) {
+        header.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,321 @@
+/* Estilos responsive - Mobile First */
+
+/* ===================== */
+/*   BREAKPOINTS         */
+/* ===================== */
+/* Mobile: 320px - 639px */
+/* Tablet: 640px - 1023px */
+/* Desktop: 1024px - 1279px */
+/* Pantallas grandes: 1280px+ */
+
+/* ===================== */
+/*   ESTILOS BASE        */
+/* ===================== */
+/* Ya definidos en estilos-base.css */
+
+/* ===================== */
+/*   TABLET (640px+)     */
+/* ===================== */
+@media (min-width: 640px) {
+  .contenedor {
+    padding-left: var(--espaciado-xl);
+    padding-right: var(--espaciado-xl);
+  }
+  
+  .seccion {
+    padding-top: clamp(3rem, 8vw, 5rem);
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+  }
+  
+  .hero__contenido {
+    padding: var(--espaciado-2xl);
+  }
+  
+  .hero__acciones {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .quienes-somos__valores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .proceso__timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contacto__contenido {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================== */
+/*   DESKTOP (1024px+)   */
+/* ===================== */
+@media (min-width: 1024px) {
+  :root {
+    --altura-header: 80px;
+  }
+  
+  .contenedor {
+    padding-left: var(--espaciado-2xl);
+    padding-right: var(--espaciado-2xl);
+  }
+  
+  .seccion {
+    padding-top: clamp(4rem, 10vw, 6rem);
+    padding-bottom: clamp(4rem, 10vw, 6rem);
+  }
+  
+  .hero__contenido {
+    padding: var(--espaciado-3xl);
+  }
+  
+  .hero__titulo {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+  
+  .quienes-somos__contenido {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaciado-3xl);
+  }
+  
+  .proceso__timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .propuesta-valor__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .contacto__contenido {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaciado-3xl);
+  }
+}
+
+/* ===================== */
+/*   PANTALLAS GRANDES   */
+/* (1280px+)             */
+/* ===================== */
+@media (min-width: 1280px) {
+  .contenedor {
+    max-width: 1320px;
+  }
+  
+  .hero__contenido {
+    max-width: 900px;
+  }
+  
+  .quienes-somos__contenido {
+    gap: var(--espaciado-4xl);
+  }
+  
+  .proceso__timeline {
+    gap: var(--espaciado-2xl);
+  }
+}
+
+/* ===================== */
+/*   PANTALLAS MUY       */
+/* GRANDES (1536px+)     */
+/* ===================== */
+@media (min-width: 1536px) {
+  .contenedor {
+    max-width: 1440px;
+  }
+  
+  .hero__titulo {
+    font-size: 4.5rem;
+  }
+}
+
+/* ===================== */
+/*   PANTALLAS ULTRA     */
+/* WIDE (1920px+)        */
+/* ===================== */
+@media (min-width: 1920px) {
+  .contenedor {
+    max-width: 1600px;
+  }
+  
+  body {
+    font-size: 18px;
+  }
+}
+
+/* ===================== */
+/*   ALTURAS MÍNIMAS     */
+/* ===================== */
+@media (max-height: 600px) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--altura-header) + var(--espaciado-xl));
+    padding-bottom: var(--espaciado-xl);
+  }
+  
+  .hero__scroll-indicador {
+    display: none;
+  }
+}
+
+/* ===================== */
+/*   MÓVILES PEQUEÑOS    */
+/* (320px - 359px)       */
+/* ===================== */
+@media (max-width: 359px) {
+  :root {
+    --espaciado-lg: 1rem;
+    --espaciado-xl: 1.5rem;
+    --espaciado-2xl: 2rem;
+  }
+  
+  .hero__titulo {
+    font-size: 1.75rem;
+  }
+  
+  .hero__subtitulo {
+    font-size: 0.9375rem;
+  }
+  
+  .seccion__titulo {
+    font-size: 1.5rem;
+  }
+  
+  .boton--grande {
+    padding: 0.875rem 1.5rem;
+    font-size: var(--tamano-fuente-base);
+  }
+  
+  .formulario-presupuesto {
+    padding: var(--espaciado-lg);
+  }
+  
+  .formulario-presupuesto__titulo {
+    font-size: var(--tamano-fuente-xl);
+  }
+}
+
+/* ===================== */
+/*   MÓVILES ESTÁNDAR    */
+/* (360px - 639px)       */
+/* ===================== */
+@media (min-width: 360px) and (max-width: 639px) {
+  .hero__titulo {
+    font-size: 2rem;
+  }
+  
+  .seccion__titulo {
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+  }
+}
+
+/* ===================== */
+/*   TABLET APUNTADA      */
+/* (640px - 767px)       */
+/* ===================== */
+@media (min-width: 640px) and (max-width: 767px) {
+  .quienes-somos__contenido {
+    grid-template-columns: 1fr;
+  }
+  
+  .proceso__timeline {
+    grid-template-columns: 1fr;
+  }
+  
+  .propuesta-valor__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================== */
+/*   TABLET LANSA         */
+/* (768px - 1023px)      */
+/* ===================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .quienes-somos__contenido {
+    grid-template-columns: 1fr;
+  }
+  
+  .proceso__timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .propuesta-valor__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================== */
+/*   LANDSCAPE MÓVIL     */
+/* ===================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-top: calc(var(--altura-header) + var(--espaciado-md));
+    padding-bottom: var(--espaciado-md);
+  }
+  
+  .hero__scroll-indicador {
+    display: none;
+  }
+  
+  .hero__contenido {
+    padding: var(--espaciado-lg);
+  }
+}
+
+/* ===================== */
+/*   IMPRESIÓN           */
+/* ===================== */
+@media print {
+  .encabezado,
+  .boton-whatsapp-contenedor,
+  .hero__scroll-indicador,
+  .hero__fondo {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+  
+  .seccion {
+    page-break-inside: avoid;
+    padding: 1rem 0;
+  }
+  
+  a {
+    text-decoration: underline;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* ===================== */
+/*   SAFE AREAS MÓVIL    */
+/* ===================== */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .boton-whatsapp-contenedor {
+    bottom: calc(var(--espaciado-xl) + env(safe-area-inset-bottom));
+  }
+  
+  .pie-de-pagina {
+    padding-bottom: calc(var(--espaciado-xl) + env(safe-area-inset-bottom));
+  }
+}
+
+/* ===================== */
+/*   DARK MODE           */
+/* ===================== */
+@media (prefers-color-scheme: dark) {
+  /* Solo aplicar si se desea soporte para dark mode */
+  /* Por defecto, la landing es clara */
+}

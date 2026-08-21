@@ -1,0 +1,269 @@
+/* Estilos de animaciones y transiciones */
+
+/* ===================== */
+/*   ANIMACIONES BASE    */
+/* ===================== */
+.animacion-aparecer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacion-aparecer--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animacion-aparecer-izquierda {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacion-aparecer-izquierda--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animacion-aparecer-derecha {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacion-aparecer-derecha--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animacion-escalar {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animacion-escalar--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Retrasos para animaciones secuenciales */
+.retraso-1 { transition-delay: 0.1s; }
+.retraso-2 { transition-delay: 0.2s; }
+.retraso-3 { transition-delay: 0.3s; }
+.retraso-4 { transition-delay: 0.4s; }
+.retraso-5 { transition-delay: 0.5s; }
+.retraso-6 { transition-delay: 0.6s; }
+
+/* ===================== */
+/*    MICROINTERACCIONES */
+/* ===================== */
+
+/* Efecto hover en tarjetas */
+.tarjeta-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de foco suave */
+.foco-suave:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Transición de colores */
+.transicion-color {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* ===================== */
+/*   EFECTOS GRADIENTE   */
+/* ===================== */
+.gradiente-texto {
+  background: var(--gradiente-primario);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradiente-borde {
+  position: relative;
+}
+
+.gradiente-borde::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradiente-primario);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradiente-borde:hover::before {
+  opacity: 1;
+}
+
+/* ===================== */
+/*    PARTÍCULAS         */
+/* ===================== */
+.particulas-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===================== */
+/*    LOADER             */
+/* ===================== */
+.loader {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-borde);
+  border-top-color: var(--color-secundario);
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* ===================== */
+/*   EFECTO RIPPLE       */
+/* ===================== */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.ripple:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* ===================== */
+/*   SHIMMER/EFFET       */
+/* ===================== */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-fondo-gris) 0%,
+    var(--color-fondo) 50%,
+    var(--color-fondo-gris) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ===================== */
+/*   PULSE               */
+/* ===================== */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ===================== */
+/*   FLOAT               */
+/* ===================== */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===================== */
+/*   SHAKE               */
+/* ===================== */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* ===================== */
+/*   ZOOM IN             */
+/* ===================== */
+.zoom-in {
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===================== */
+/*   RESPEST prefers-reduced-motion */
+/* ===================== */
+@media (prefers-reduced-motion: reduce) {
+  .animacion-aparecer,
+  .animacion-aparecer-izquierda,
+  .animacion-aparecer-derecha,
+  .animacion-escalar {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  
+  .shimmer,
+  .pulse,
+  .float {
+    animation: none;
+  }
+  
+  .ripple::after {
+    transition: none;
+  }
+}

@@ -1,0 +1,53 @@
+// Datos de proyectos de Nodo Ético
+export const proyectos = [
+  {
+    id: 'sistema-gestion-inventario',
+    titulo: 'Sistema de Gestión de Inventario',
+    descripcion: 'Plataforma web completa para control de stock, movimientos de inventario y reportes en tiempo real.',
+    categoria: 'Sistema Web',
+    imagen: 'proyecto-inventario.jpg',
+    tecnologias: ['React', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
+    problema: 'Una empresa de distribución perdía horas controlando inventario manualmente, generando errores y demoras.',
+    resultado: 'Reducción del 80% en tiempo de control de inventario, eliminación de errores manuales y reportes automáticos.',
+    enlace: '#',
+    activo: true,
+  },
+  {
+    id: 'app-delivery-sustentable',
+    titulo: 'App Delivery Sustentable',
+    descripcion: 'Aplicación móvil para delivery con enfoque en sostenibilidad y optimización de rutas.',
+    categoria: 'Aplicación Móvil',
+    imagen: 'proyecto-delivery.jpg',
+    tecnologias: ['React Native', 'Firebase', 'Google Maps API', 'Stripe'],
+    problema: 'Un emprendedor de delivery local necesitaba una app moderna que reduzca huella de carbono.',
+    resultado: 'App lanzada con 500+ usuarios activos, reducción del 30% en emisiones por optimización de rutas.',
+    enlace: '#',
+    activo: true,
+  },
+  {
+    id: 'dashboard-analitica-ia',
+    titulo: 'Dashboard de Analítica con IA',
+    descripcion: 'Panel de control inteligente que procesa datos empresariales y genera predicciones automáticas.',
+    categoria: 'Inteligencia Artificial',
+    imagen: 'proyecto-dashboard.jpg',
+    tecnologias: ['Python', 'TensorFlow', 'FastAPI', 'React', 'D3.js'],
+    problema: 'Una pyme no podía visualizar sus datos de ventas ni predecir tendencias de mercado.',
+    resultado: 'Dashboard con predicciones de ventas al 92% de precisión, permitiendo decisiones estratégicas informadas.',
+    enlace: '#',
+    activo: true,
+  },
+  {
+    id: 'sistema-automatizacion-recursos-humanos',
+    titulo: 'Automatización de RRHH',
+    descripcion: 'Sistema que automatiza procesos de recursos humanos: evaluaciones, reportes y seguimiento de empleados.',
+    categoria: 'Automatización',
+    imagen: 'proyecto-rrhh.jpg',
+    tecnologias: ['Vue.js', 'Express', 'MongoDB', 'Cron Jobs'],
+    problema: 'Una empresa con 200+ empleados perdía días en procesos manuales de evaluación y reportes.',
+    resultado: 'Automatización completa del 85% de procesos de RRHH, ahorrando 40 horas mensuales de trabajo manual.',
+    enlace: '#',
+    activo: true,
+  },
+];
+
+export default proyectos;

@@ -1,0 +1,19 @@
+# Archivo robots.txt para Nodo Ético
+# https://nodoetico.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nodoetico.com/sitemap.xml
+
+# No permitir acceso a archivos de configuración
+Disallow: /configuracion/
+Disallow: /js/
+Disallow: /css/
+
+# Permitir acceso a assets públicos
+Allow: /assets/
+
+# Crawl-delay (opcional)
+# Crawl-delay: 1

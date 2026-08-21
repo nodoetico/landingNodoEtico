@@ -1,0 +1,15 @@
+# Archivos del sistema
+nul
+.DS_Store
+Thumbs.db
+
+# Archivos de verificación (no necesarios en producción)
+verificar-configuracion.js
+verificar-sintaxis.js
+configuracion-rapida.js
+configuracion/CONFIGURACION-EJEMPLO.md
+CHECKLIST-FINAL.md
+RESUMEN-PROYECTO.md
+INICIO-RAPIDO.md
+index-simplificado.html
+instrucciones.txt

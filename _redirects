@@ -1,0 +1,15 @@
+# Seguridad - Impedir acceso a archivos sensibles
+/configuracion/*  403
+/componentes/*    403
+/datos/*          403
+/js/*             403
+/css/*            403
+/assets/*         403
+/.git/*           403
+/.gitignore       403
+/verificar-*      403
+/README.md        403
+/*.md             403
+
+# Redirigir 404 a página principal
+/*                /index.html  200

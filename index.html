@@ -53,6 +53,60 @@
     ul { list-style: none; }
     button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
+    /* BOTÓN DARK MODE */
+    .btn-darkmode { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--color-fondo-gris); border: 1px solid var(--color-borde); color: var(--color-texto); transition: all 0.3s; cursor: pointer; }
+    .btn-darkmode:hover { background: var(--color-secundario); color: white; border-color: var(--color-secundario); }
+    .btn-darkmode svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .btn-darkmode .icono-luna { display: none; }
+    .btn-darkmode .icono-sol { display: block; }
+    html.dark .btn-darkmode .icono-luna { display: block; }
+    html.dark .btn-darkmode .icono-sol { display: none; }
+
+    /* DARK MODE */
+    html.dark { color-scheme: dark; }
+    html.dark body { background: #0f172a; color: #e2e8f0; }
+    html.dark .encabezado { background: rgba(15,23,42,0.98); border-bottom-color: #1e293b; }
+    html.dark .encabezado__logo { color: #f1f5f9; }
+    html.dark .encabezado__enlace { color: #cbd5e1; }
+    html.dark .encabezado__enlace:hover { color: #3b82f6; }
+    html.dark .btn-darkmode { background: #1e293b; border-color: #334155; color: #f1f5f9; }
+    html.dark .seccion__titulo { color: #f1f5f9; }
+    html.dark .seccion__subtitulo { color: #94a3b8; }
+    html.dark .seccion--gris { background: #1e293b; }
+    html.dark .quienes-somos__parrafo { color: #94a3b8; }
+    html.dark .quienes-somos__destacado { color: #e2e8f0; border-left-color: #3b82f6; }
+    html.dark .quienes-somos__valor { background: #1e293b; }
+    html.dark .quienes-somos__valor:hover { background: #334155; }
+    html.dark .quienes-somos__valor-titulo { color: #f1f5f9; }
+    html.dark .quienes-somos__valor-desc { color: #94a3b8; }
+    html.dark .tarjeta-servicio { background: #1e293b; border-color: #334155; }
+    html.dark .tarjeta-servicio:hover { border-color: #3b82f6; }
+    html.dark .tarjeta-servicio__titulo { color: #f1f5f9; }
+    html.dark .tarjeta-servicio__desc { color: #94a3b8; }
+    html.dark .tarjeta-servicio__item { color: #cbd5e1; }
+    html.dark .tarjeta-proyecto { background: #1e293b; border-color: #334155; }
+    html.dark .tarjeta-proyecto:hover { border-color: #3b82f6; }
+    html.dark .tarjeta-proyecto__titulo { color: #f1f5f9; }
+    html.dark .tarjeta-proyecto__desc { color: #94a3b8; }
+    html.dark .tarjeta-proyecto__tech-item { background: #0f172a; color: #cbd5e1; }
+    html.dark .formulario { background: #1e293b; border-color: #334155; }
+    html.dark .formulario__titulo { color: #f1f5f9; }
+    html.dark .formulario__subtitulo { color: #94a3b8; }
+    html.dark .campo__etiqueta { color: #e2e8f0; }
+    html.dark .campo__input { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+    html.dark .campo__input:focus { border-color: #3b82f6; }
+    html.dark .campo__input::placeholder { color: #64748b; }
+    html.dark .contacto__titulo { color: #f1f5f9; }
+    html.dark .contacto__texto { color: #94a3b8; }
+    html.dark .contacto__canal { background: #1e293b; }
+    html.dark .contacto__canal:hover { background: #334155; }
+    html.dark .contacto__canal-titulo { color: #f1f5f9; }
+    html.dark .contacto__canal-valor { color: #94a3b8; }
+    html.dark .item-valor { background: #1e293b; }
+    html.dark .item-valor:hover { background: #334155; }
+    html.dark .item-valor__titulo { color: #f1f5f9; }
+    html.dark .item-valor__desc { color: #94a3b8; }
+
     /* CONTENEDOR */
     .contenedor { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--espaciado-lg); }
 
@@ -299,6 +353,10 @@
       
       <div class="encabezado__acciones">
         <a href="#presupuesto" class="boton boton--primario" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Solicitar presupuesto</a>
+        <button class="btn-darkmode" id="btn-darkmode" aria-label="Cambiar modo oscuro" title="Cambiar modo oscuro">
+          <svg class="icono-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icono-luna" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
       </div>
       
       <button class="encabezado__btn-menu" aria-label="Menú">
@@ -1101,6 +1159,23 @@
       } else {
         header.style.boxShadow = 'none';
       }
+    });
+
+    // ============================================
+    // DARK MODE
+    // ============================================
+    const btnDarkMode = document.getElementById('btn-darkmode');
+    const html = document.documentElement;
+    
+    // Cargar preferencia guardada
+    if (localStorage.getItem('darkMode') === 'true' || 
+        (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+    }
+    
+    btnDarkMode.addEventListener('click', function() {
+      html.classList.toggle('dark');
+      localStorage.setItem('darkMode', html.classList.contains('dark'));
     });
   </script>
 </body>

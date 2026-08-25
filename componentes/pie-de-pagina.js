@@ -101,8 +101,8 @@ export function crearPieDePagina() {
           <p>&copy; ${new Date().getFullYear()} ${configuracionEmpresa.nombre}. Todos los derechos reservados.</p>
         </div>
         <div class="pie-de-pagina__legales">
-          <a href="#" class="pie-de-pagina__enlace-legal">Política de privacidad</a>
-          <a href="#" class="pie-de-pagina__enlace-legal">Términos y condiciones</a>
+          <a href="/politica-de-privacidad.html" class="pie-de-pagina__enlace-legal">Política de privacidad</a>
+          <a href="/terminos-y-condiciones.html" class="pie-de-pagina__enlace-legal">Términos y condiciones</a>
         </div>
       </div>
     </div>

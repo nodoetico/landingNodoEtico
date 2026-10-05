@@ -1,0 +1,331 @@
+# PROMPT PARA AGENTE IA — LANDING PAGE PROFESIONAL PARA “NODO ÉTICO - Sistemas Inteligentes”
+
+Quiero que desarrolles una landing page moderna, profesional, minimalista e impactante para una startup tecnológica llamada:
+
+“NODO ÉTICO - Sistemas Inteligentes”
+
+La landing debe transmitir:
+
+* Innovación
+* Inteligencia artificial
+* Tecnología avanzada
+* Profesionalismo
+* Confianza
+* Futuro
+* Automatización inteligente
+* Diseño premium
+
+---
+
+## 🎨 ESTILO VISUAL
+
+El diseño debe ser:
+
+* Oscuro (dark mode)
+* Minimalista pero llamativo
+* Con estética tecnológica futurista
+* Elegante y profesional
+* Muy moderno
+* Con detalles neon sutiles
+* No debe verse recargado ni exagerado
+* Debe transmitir una identidad premium
+
+Inspiración visual:
+
+* SaaS modernos
+* Empresas de IA
+* Startups tecnológicas de Silicon Valley
+* Interfaces cyberpunk minimalistas
+* Diseño UI futurista
+
+Paleta recomendada:
+
+* Fondo principal: negro/gris muy oscuro
+* Detalles neon:
+
+  * azul eléctrico
+  * violeta
+  * cyan
+  * verde neon suave
+* Sombras suaves y glow sutil
+* Tipografía moderna y limpia
+
+Animaciones:
+
+* Suaves
+* Elegantes
+* Optimizadas
+* Sin excesos
+* Efectos hover premium
+* Microinteracciones modernas
+
+---
+
+## 📱 RESPONSIVE / MOBILE FIRST
+
+REQUISITO CRÍTICO:
+
+La landing debe estar desarrollada con enfoque:
+
+* MOBILE FIRST
+* Responsive real
+* Adaptable a cualquier resolución
+* Escalable
+* Modular
+* Optimizada para:
+
+  * celulares
+  * tablets
+  * notebooks
+  * monitores ultrawide
+
+Debe funcionar perfectamente en:
+
+* Chrome
+* Edge
+* Firefox
+* Safari
+* Android
+* iPhone
+
+La experiencia móvil debe ser PRIORIDAD.
+
+---
+
+## 🧠 ESTRUCTURA DE LA LANDING
+
+La landing debe incluir:
+
+1. HERO SECTION
+
+* Título impactante
+* Subtítulo profesional
+* Frase tecnológica relacionada a IA y automatización
+* CTA principal:
+  “Solicitar propuesta”
+* CTA secundario:
+  “Hablar por WhatsApp”
+
+Debe incluir:
+
+* fondo tecnológico
+* efectos futuristas suaves
+* animaciones elegantes
+
+---
+
+2. SECCIÓN DE SERVICIOS
+
+Mostrar servicios como:
+
+* Desarrollo de software
+* Automatización inteligente
+* IA aplicada
+* Sistemas empresariales
+* Integraciones
+* Soluciones SaaS
+* Bots inteligentes
+* Plataformas personalizadas
+
+Cada servicio debe tener:
+
+* icono moderno
+* hover elegante
+* diseño modular
+
+---
+
+3. SECCIÓN “POR QUÉ ELEGIRNOS”
+
+Debe destacar:
+
+* Escalabilidad
+* Tecnología moderna
+* Desarrollo ético
+* Optimización de procesos
+* Arquitectura sólida
+* Diseño profesional
+* Automatización inteligente
+
+---
+
+4. SECCIÓN DE TECNOLOGÍAS
+
+Mostrar stack tecnológico moderno:
+
+* React
+* Next.js
+* Node.js
+* Python
+* IA
+* APIs
+* Cloud
+* Bases de datos
+
+Diseño visual tipo:
+
+* badges
+* cards
+* grid futurista
+
+---
+
+5. SECCIÓN DE CONTACTO
+
+MUY IMPORTANTE.
+
+Debe incluir:
+
+* formulario profesional
+* validaciones
+* UX moderna
+* diseño elegante
+
+Campos:
+
+* Nombre
+* Empresa
+* Correo electrónico
+* Número de WhatsApp (OPCIONAL)
+* Mensaje
+
+REQUISITO FUNCIONAL:
+Cuando el usuario envíe el formulario:
+
+* Debe llegar un correo electrónico automáticamente
+* Debe poder integrarse fácilmente con:
+
+  * EmailJS
+  * Resend
+  * Nodemailer
+  * API propia
+
+Además:
+
+* Debe existir un botón fijo de WhatsApp
+* Integración directa para solicitar:
+
+  * propuesta
+  * presupuesto
+  * reunión
+
+El mensaje de WhatsApp debe autocompletarse.
+
+---
+
+6. FOOTER
+
+Debe incluir:
+
+* logo
+* redes
+* contacto
+* slogan tecnológico
+* derechos reservados
+
+Diseño elegante y minimalista.
+
+---
+
+## ⚙️ ARQUITECTURA Y DESARROLLO
+
+REQUISITOS TÉCNICOS OBLIGATORIOS:
+
+El proyecto debe ser:
+
+* Profesional
+* Modular
+* Escalable
+* Mantenible
+* Optimizado
+* Bien estructurado
+
+El código debe:
+
+* estar limpio
+* organizado
+* separado por componentes
+* reutilizable
+
+Usar:
+
+* buenas prácticas
+* arquitectura moderna
+* componentes reutilizables
+* separación de responsabilidades
+
+---
+
+## 🧾 CÓDIGO Y DOCUMENTACIÓN
+
+REQUISITO MUY IMPORTANTE:
+
+TODO debe estar:
+
+* comentado en español
+* documentado en español
+
+Además:
+
+* Variables en español
+* Funciones en español
+* Componentes con nombres claros
+* Comentarios explicativos
+* Explicar lógica importante
+
+El código debe parecer desarrollado por un equipo senior.
+
+---
+
+## 🚀 PERFORMANCE Y OPTIMIZACIÓN
+
+Optimizar:
+
+* SEO
+* velocidad
+* carga
+* imágenes
+* accesibilidad
+* performance mobile
+
+Implementar:
+
+* lazy loading
+* buenas prácticas SEO
+* estructura semántica
+* metadata
+* Open Graph
+* animaciones optimizadas
+
+---
+
+## 🧩 TECNOLOGÍAS SUGERIDAS
+
+Preferentemente utilizar:
+
+* React
+* Next.js
+* TailwindCSS
+* Framer Motion
+
+Pero mantener arquitectura flexible y escalable.
+
+---
+
+## 🎯 OBJETIVO FINAL
+
+La landing debe hacer que:
+
+* la startup se vea premium
+* moderna
+* tecnológica
+* altamente profesional
+
+Debe generar:
+
+* confianza
+* impacto visual
+* sensación de empresa avanzada
+* conversión de clientes
+
+El resultado final debe verse como una startup tecnológica seria, moderna y preparada para escalar.

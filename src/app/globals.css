@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --fondo: #0a0a0a;
+  --texto-principal: #ededed;
+  --texto-secundario: #a0a0a0;
+  --neon-azul: #00b4d8;
+  --neon-violeta: #8b5cf6;
+  --neon-cyan: #22d3ee;
+  --neon-verde: #34d399;
+  --superficie: #111111;
+  --superficie-elevada: #1a1a1a;
+  --borde-sutil: #222222;
+}
+
+@theme inline {
+  --color-fondo: var(--fondo);
+  --color-texto-principal: var(--texto-principal);
+  --color-texto-secundario: var(--texto-secundario);
+  --color-neon-azul: var(--neon-azul);
+  --color-neon-violeta: var(--neon-violeta);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-verde: var(--neon-verde);
+  --color-superficie: var(--superficie);
+  --color-superficie-elevada: var(--superficie-elevada);
+  --color-borde-sutil: var(--borde-sutil);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neon-azul) transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Compensa la altura del encabezado fijo al saltar a una sección. */
+  scroll-padding-top: 5rem;
+  /* Indica al navegador que la página es oscura para que los
+     controles nativos (selectores, barras) usen el tema correcto. */
+  color-scheme: dark;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto-principal);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(0, 180, 216, 0.3);
+  color: #ffffff;
+}
+
+/**
+ * Accesibilidad: respeta la preferencia del sistema de reducir el
+ * movimiento, desactivando las transiciones y animaciones.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
